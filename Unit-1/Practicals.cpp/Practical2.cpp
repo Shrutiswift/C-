@@ -3,17 +3,16 @@
 using namespace std;
 int main()
 {
-    cout << "Name: Shruti Sharma\n";
-    cout << "UID:21BCS9445\n";
-    int n, first, last, sum, digits, z, a, b;
-    cout << "Input any number: ";
+    int lastdigit, firstdigit, count = 0, swap, n, temp;
+    cout << "Enter the number: ";
     cin >> n;
-    digits = (int)log10(n);
-    first = n / pow(10, digits);
-    last = n % 10;
-    a = first * (pow(10, digits));
-    b = n % a;
-    n = b / 10;
-    z = last * (pow(10, digits)) + (n * 10 + first);
-    cout << "The number after swaping the first and last digits are: " << z << endl;
+    temp = n;
+    lastdigit = temp % 10;
+    count = (int)log10(temp);
+    while(temp >= 10) {
+        temp /= 10;
+    }
+    firstdigit = temp;
+    swap = (lastdigit*pow(10, count) + firstdigit) + (n - (firstdigit*pow(10, count)+lastdigit));
+    cout<<"After swap: "<<swap;
 }

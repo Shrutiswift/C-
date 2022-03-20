@@ -1,37 +1,28 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    cout << "Name: Shruti Sharma\n";
-    cout << "UID:21BCS9445\n";
-    int n, c, first = 0, second = 1, next;
-    int a[20], i, j = 0, count = 0;
-    cout << "Enter the n of terms:";
-    cin >> n;
-    cout << "Fibonacci series " << endl;
-    for (c = 0; c < n; c++)
-    {
-        if (c <= 1)
-            next = c;
-        else
-        {
-            next = first + second;
-            first = second;
-            second = next;
-        }
-        cout << next << endl;
-        if (next - first > 1)
-        {
-            for (i = first + 1; i < next; i++)
-            {
-                a[j] = i;
-                count++;
-                j++;
-            }
-        }
+    int a=0,b,c=1,temp,i,mis[10001],j=4;
+    cout<<"Enter the number of terms: ";
+    cin>>b;
+    cout<<"Fibonacci Series:\n";
+    cout<<"0\n";
+    for (i=0;i<b-1;i++){
+        temp=a;
+        cout<<a+c<<"\n";
+        mis[i]=a+c;
+        a=temp+c;
+        c=temp;
     }
-    cout << "Missing numbers of the series:" << endl;
-    for (j = 0; j < count; j++)
-        cout << a[j] << endl;
+    cout<<"\nMissing Number:\n";
+    for (int i = 4; i < mis[b-2]; i++)
+    {
+        while(j>mis[i-1]&&j<mis[i]){
+            cout<<j<<"\n";
+            j++;
+        }
+        j++;
+    }
+    
     return 0;
 }
