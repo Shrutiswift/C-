@@ -5,9 +5,8 @@ class Me {
     int mynum;
     
 };
-int main() {
+void main() {
     Me myobj;
     myobj.mynum = 16;
     cout << myobj.mynum << "\n";
-    return 0;
 }
