@@ -3,10 +3,13 @@ using namespace std;
 class Me {
     public:
     int mynum;
-    
+    string mystring;
 };
-void main() {
+int main() {
     Me myobj;
-    myobj.mynum = 16;
+    myobj.mynum = 177;
+    myobj.mystring = "Shruti";
     cout << myobj.mynum << "\n";
+    cout << myobj.mystring;
+    return 0;
 }
