@@ -7,7 +7,7 @@ class area {
     {
         length = 10;
         breadth = 27;
-        cout << "Name: Shruti Sharma\nUID: 21BCS9445" << "\n";
+        cout << "Name: Nikhil\nUID: 21BCS9434" << "\n";
         cout << "Length = "<< length <<"\n";
         cout << "Breadth = " << breadth << "\n";
     }
