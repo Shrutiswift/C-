@@ -9,14 +9,14 @@ class student {
             cin >> rollno;
         }
         void putnumber() {
-            cout << "RollNo:" << rollno <<"\n";
+            cout << "RollNo: \n" << rollno <<"\n";
         }
 };
 class test : virtual public student {
     public:
     int a, b;
     void getmarks() {
-        cout << "Marks :";
+        cout << "Marks :\n";
         cout << "a: ";
         cin >> a;
         cout << "b: ";
@@ -24,19 +24,19 @@ class test : virtual public student {
     }
     void putmarks() {
         cout << "Marks obtained: \n";
-        cout << "a\n" << a;
-        cout << "b\n" << b;
+        cout << "a" << a <<"\n";
+        cout << "b\n" << b <<"\n";
     }
 };
 class sports: virtual public student{
 public:
     int score;
     void getscore() {
-        cout << "Score :";
+        cout << "Score: \n";
         cin >> score;
     }
     void putscore() {
-        cout << "Sports score: ";
+        cout << "Sports score: \n";
         cin >> score;
     }
 
@@ -49,7 +49,7 @@ class result: public test, public sports {
         putnumber();
         putscore();
         putmarks();
-        cout << "Total Score:\n";
+        cout << "Total Score: \n";
     }
 };
 int main() {
