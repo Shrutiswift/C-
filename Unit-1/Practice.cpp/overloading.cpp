@@ -4,10 +4,10 @@ class student {
     int x;
     public:
             int area(float length){
-                return length*length;
+                cout << length*length;
             }
             int area(int breadth){
-                return breadth*breadth;
+                cout << breadth*breadth;
             }
             
         
