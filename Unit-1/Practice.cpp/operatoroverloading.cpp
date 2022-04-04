@@ -8,10 +8,10 @@ class complex {
     real = r;
     img = i;
     }
-    complex operator + (complex c1) {
+    complex operator + (complex const &obj) {
         complex result;
-        result.img = img + c1.img;
-        result.real = real + c1.real;
+        result.img = img + obj.img;
+        result.real = real + obj.real;
         return result;
     }
     void display(){

@@ -8,20 +8,20 @@ public:
     int salary;
 
     void display() {
-        std::cout << "Name: "<< name << std::endl;
-        std::cout << "Age: "<< age << std::endl;
-        std::cout << "Company: "<< company << std::endl;
-        std::cout << "Salary: "<< salary << std::endl;
+        cout << "Name: "<< name << endl;
+        cout << "Age: "<< age << endl;
+        cout << "Company: "<< company << endl;
+        cout << "Salary: "<< salary << endl;
     }
-    Employee(string name, int age, string company, int salary){
-        name = name;
-        age = age;
-        company = company;
-        salary = salary;
+    Employee(string nma, int agme, string compamny, long salamry){
+        name = nma;
+        age = agme;
+        company = compamny;
+        salary = salamry;
     }
 };
 int main() {
-    Employee employee1 = Employee("Shruti", 24, "Microsoft", 2000000);
+    Employee employee1 = Employee("Bhaiya", 24, "Microsoft", 2000000);
     employee1.display();
     Employee employee2 = Employee("Ananya", 28, "Google", 2879999);
     employee2.display();
