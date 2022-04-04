@@ -8,17 +8,15 @@ class complex {
     real = r;
     img = i;
     }
-
-    complex operator + (complex const &obj) {
+    complex operator + (complex c1) {
         complex result;
-        result.img = img + obj.img;
-        result.real = real + obj.real;
+        result.img = img + c1.img;
+        result.real = real + c1.real;
         return result;
     }
     void display(){
     cout << real << " + " << img << "i" << endl;
     }
-    
 };
 int main() {
     complex c1(2, 3), c2(3, 5);
