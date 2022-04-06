@@ -1,45 +1,40 @@
-#include "iostream"
+#include "bits/stdc++.h"
 using namespace std;
-class Test
+
+class pairs
 {
-private:
-    int num;
+    char pair[50];
+
 public:
-    Test()
+    friend ostream &operator<<(ostream &output, pairs &p)
     {
-        num = 0;
+        output << p.pair;
+        return output;
     }
-    Test(int n)
+
+    friend istream &operator>>(istream &input, pairs &p)
     {
-        num = n;
-    }
-    void display()
-    {
-        cout << "Number: " << num << endl;
-    }
-    Test operator++()
-    {
-        ++num;
-        return Test(num);
-    }
-    Test operator++(int)
-    {
-        Test t(num);
-        ++num;
-        return t;
+        char temp[50];
+        input >> temp;
+        int length = strlen(temp);
+        if (length < 5 || temp[0] != '(' || temp[length - 1] != ')' || !strstr(temp, ","))
+        {
+            cout << "Invalid Pair Value...\n";
+            strcpy(temp, "");
+        }
+        else
+        {
+            strcpy(p.pair, temp);
+        }
+        return input;
     }
 };
-int main()
+
+int main(void)
 {
-    cout<<"Shruti\n21BCS9445\n";
-    Test T1(11), T2(11), T3;
-    ++T1;
-    T1.display();
-    T2++;
-    T2.display();
-    T3.display();
-    T3 = T2++;
-    T2.display();
-    T3.display();
-    return 0;
+    pairs pair;
+    cout<<"Shruti Sharma\n21BCS9445\n";
+    cout << "Enter the value of pair object: ";
+    cin >> pair;
+    cout << "Entered pair value is: " << pair << endl;
 }
