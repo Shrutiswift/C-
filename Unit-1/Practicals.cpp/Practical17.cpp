@@ -2,31 +2,31 @@
 using namespace std;
 class test {
     private:
-    int num;
+    int a;
     public:
     test() {
-        num = 0;
+        a = 0;
     }
     test(int x) {
-        num = x;
+        a = x;
     }
     void display(){
-        cout << "Number: " << num<<endl; 
+        cout << "aber: " << a <<endl; 
     }
     test operator++ () {
-        ++num;
-        return test(num);
+        ++a;
+        return test(a);
     }
     test operator++(int) {
-        test t(num);
-        ++num;
+        test t(a);
+        ++a;
         return t;
     }
 };
 int main() {
-    test t1, t2, t3, t4;
-    ++t1;
-    t1.display();
+    test x, t2, t3, t4;
+    ++x;
+    x.display();
     t2++;
     t2.display();
     t3 = t2++;
