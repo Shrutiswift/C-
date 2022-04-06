@@ -11,10 +11,11 @@ class test {
         num = x;
     }
     void display(){
-        cout << "Number :" << num; 
+        cout << "Number: " << num<<endl; 
     }
     test operator++ () {
         ++num;
+        return test(num);
     }
     test operator++(int) {
         test t(num);
@@ -31,5 +32,5 @@ int main() {
     t3 = t2++;
     t2.display();
     t3.display();
-
+    return 0;
 }
