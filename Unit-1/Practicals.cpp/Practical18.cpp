@@ -1,15 +1,18 @@
 #include <iostream>
 using namespace std;
+#define ROWS 50
+#define COLS 50
+
 class Matrix
 {
 public:
-    int arr[MAXROWS][MAXCOLS];
+    int arr[ROWS][COLS];
     int rows, cols;
     Matrix()
     {
         rows = cols = 2;
     }
-    Matrix(int r, int c, int mat[MAXROWS][MAXCOLS])
+    Matrix(int r, int c, int mat[ROWS][COLS])
     {
         rows = r;
         cols = c;
@@ -40,7 +43,7 @@ public:
         {
             return Matrix();
         }
-        int mat[MAXROWS][MAXCOLS];
+        int mat[ROWS][COLS];
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < cols; j++)
@@ -71,7 +74,7 @@ public:
 };
 int main()
 {
-    int arr1[MAXROWS][MAXCOLS], arr2[MAXROWS][MAXCOLS];
+    int arr1[ROWS][COLS], arr2[ROWS][COLS];
 
     arr1[0][0] = 1;
     arr1[0][1] = 2;
