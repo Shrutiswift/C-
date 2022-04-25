@@ -16,7 +16,7 @@ public:
     }
 };
     complex add (complex luna, complex shibo){
-    luna.x += shibo.x;
+        luna.x += shibo.x;
         luna.y += shibo.y;
         return luna;
     }
