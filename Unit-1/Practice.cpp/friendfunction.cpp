@@ -4,21 +4,29 @@ class complex {
 public:
     int x;
     int y;
+    int q, w;
 
     void input() {
-    cout << "Enter a Number: " << "\n";
-    cin >> x;
-    cout << "Enter another Number: " << "\n";
-    cin >> y;
+    cout << "Enter real and imaginary Number: " << "\n";
+    cin >> x >> y;
     }
+    friend complex add (complex luna, complex shibo){
+        
+    }
+
     void display() {
         cout << x << "+" << y << "i" << endl;
+        
     }
 };
 int main () {
     int x, y;
-    complex q, w, r;
-    
+    complex luna, shibo;
+    luna.input();
+    shibo.input();
+    luna.display();
+    shibo.display();
+
     try {
         if(x < 5) {
             throw x;
