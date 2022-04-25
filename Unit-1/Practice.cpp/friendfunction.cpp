@@ -9,17 +9,17 @@ public:
     cout << "Enter real and imaginary Number: " << "\n";
     cin >> x >> y;
     }
-    friend complex add (complex luna, complex shibo){
-        luna.x += shibo.x;
-        luna.y += shibo.y;
-        return luna;
-    }
-
+    friend complex add (complex luna, complex shibo);
     void display() {
         cout << x << "+" << y << "i" << endl;
         
     }
 };
+    complex add (complex luna, complex shibo){
+    luna.x += shibo.x;
+        luna.y += shibo.y;
+        return luna;
+    }
 int main () {
     int x, y;
     complex luna, shibo;
@@ -27,7 +27,7 @@ int main () {
     shibo.input();
     luna.display();
     shibo.display();
-
+    add(luna,shibo);
     try {
         if(x < 5) {
             throw x;
