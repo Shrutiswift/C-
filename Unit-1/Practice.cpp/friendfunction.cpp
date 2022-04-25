@@ -4,14 +4,15 @@ class complex {
 public:
     int x;
     int y;
-    int q, w;
 
     void input() {
     cout << "Enter real and imaginary Number: " << "\n";
     cin >> x >> y;
     }
     friend complex add (complex luna, complex shibo){
-        
+        luna.x += shibo.x;
+        luna.y += shibo.y;
+        return luna;
     }
 
     void display() {
