@@ -1,27 +1,41 @@
 #include "iostream"
 using namespace std;
-void handle(int x) {
-    try {
+void shibu(double x)
+{
+    try
+    {
         if (x == 0)
-        throw x;
-        if(x == 1)
-        throw 'z';
-        if(x == 2)
-        throw 88.88;
+            throw x;
+        if (x == 1)
+            throw 'a';
+        if (x == 2)
+            throw 88.88;
+        else throw ">>";
     }
-    catch (int n) {
-        cout << "Caught: "<< n << "\n";
-        }
-        {
-        cout << "Caught one!!"<< "\n";
-        }
+    catch (int x)
+    {
+        cout << "Caught: " << x << endl;
+    }
+
+    catch(char a){
+        cout << "Got: " << a << endl;
+    }
+    
+    catch(double number) {
+        cout << "Got one!" << endl;
+    }
+    catch(...){
+        cout << "Got there" << endl;
+    }
 }
-    int main() {
-        cout <<"Name: Shruti Sharma\nUID: 21BCS9445\n";
-        cout << "Start\n";
-        handle(0);
-        handle(1);
-        handle(2);
-        cout << "End";
-        return 0;
-    }
+int main()
+{
+    int x;
+    cout << "Name: Shruti Sharma\nUID: 21BCS9445\n";
+    cout << "Start\n";
+    cout << "Enter a number or a character: " << endl;
+    cin >> x;
+    shibu(x);
+    cout << "End";
+    return 0;
+}
