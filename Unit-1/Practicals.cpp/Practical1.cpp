@@ -10,8 +10,8 @@ using namespace std;
             total += marks;
         }
         average = total/subject;
-        cout << "Total marks = " << total;
-        cout << "\nAverage marks = " << average;
+        cout << "Total marks is: " << total;
+        cout << "\nAverage marks is:  " << average;
         return 0;
         
     }
