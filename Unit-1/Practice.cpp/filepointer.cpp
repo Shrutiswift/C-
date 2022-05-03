@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     char name[20];
     char ch;
+    cout << "Enter the name: ";
     cin >> name;
     int len = strlen(name);
     fstream f ("Text", ios::in|ios::out|ios::app);
