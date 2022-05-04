@@ -14,6 +14,7 @@ int main() {
     for(int i=0;i<len;i++)
     {
         f.put(name[i]);
+        f << "\n";
     }
     f.seekg(0);
     //int a=f.tellp();
@@ -22,5 +23,5 @@ int main() {
         f1.put(ch);
       //<< ch;
     }
-   // cout<<a;
+    // cout<<a;
 }

@@ -8,18 +8,30 @@ class student{
         int age;
         int rollno;
     void get(void) {
-        cout << "Enter the name: \n" << "Enter the rollno: \n" << "Enter the age: \n";
-        cin.getline(name, sizeof(name));
+        cout << "Enter the name: ";
+        cin>>name;
+        cout<< "Enter the rollno: ";
         cin >> rollno;
+        cout << "Enter the age: ";
         cin >> age;
+        
     }
     void show(void) {
-        cout << "Name:\n" << name << "\t\tRollNo:\n" << rollno << "\t\tAge:\n" << age;
+        cout << "S.no\t\tName\t\tRoll No\t\tAge\n" << << name << "\t\t" << rollno << "\t\t" << age;
     }
 };
 
 int main() {
     student obj;
-    fstream file;
+    obj.get();
+    ofstream o("Shibu");
+    o.write((char *) &obj, sizeof(obj));
+    o.close();
+    ifstream i("Shibu");
+    student o1;
+    i.read((char *) &o1, sizeof(o1));
+    o1.show();
+    return 0;
+
 
 }
