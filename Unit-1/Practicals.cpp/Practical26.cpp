@@ -17,7 +17,7 @@ class student{
         
     }
     void show(void) {
-        cout << "S.no\t\tName\t\tRoll No\t\tAge\n" << << name << "\t\t" << rollno << "\t\t" << age;
+        cout << "Name\t\tRoll No\t\tAge\n" << name << "\t\t" << rollno << "\t\t" << age;
     }
 };
 
