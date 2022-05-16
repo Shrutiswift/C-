@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    int age, n, serial = 1, RollNo;
+    int age, n, serial = 1;
     char name[20];
-    cout << "How many data do you want to make: ";
+    cout << "How many entries do you want to make: ";
     cin >> n;
     cout << endl;
     fstream file;
@@ -17,7 +17,7 @@ int main()
         return 0;
     }
 
-    file << "S.No     Name     Age     RollNo" << endl;
+    file << "Sr.No     Name     Age" << endl;
 
     for (int i = 0; i < n; ++i)
     {
@@ -25,22 +25,20 @@ int main()
         cin >> name;
         cout << "Enter your age: ";
         cin >> age;
-        cout << "Enter your RollNo: ";
-        cin >> RollNo;
-        file << " " << serial << "     " << name << "     " << age << "     " << RollNo << endl;
+        file << " " << serial << "    " << name << "   " << age << endl;
         serial++;
     }
-    
+    cout << "\n<===== Student Data =====>" << endl;
     file.seekg(0, ios::beg);
     while (true)
     {
-        char shibu[100];
-        file.getline(shibu, 50);
+        char hue[100];
+        file.getline(hue, 50);
         if (file.eof())
         {
             break;
         }
-        cout << shibu << endl;
+        cout << hue << endl;
     }
     return 0;
 }

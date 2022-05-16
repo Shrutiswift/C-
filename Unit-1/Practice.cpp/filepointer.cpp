@@ -4,10 +4,15 @@
 using namespace std;
 
 int main() {
+    string Text, Text1;
     char name[20];
     char ch;
     cout << "Enter the name: ";
     cin >> name;
+    cout << "Enter the name of the source file: ";
+    cin >> Text;
+    cout << "Enter the name of the target file: ";
+    cin >> Text1;
     int len = strlen(name);
     fstream f ("Text", ios::in|ios::out|ios::app);
     fstream f1 ("Text1", ios::in|ios::out|ios::app);
@@ -17,11 +22,11 @@ int main() {
         f << "\n";
     }
     f.seekg(0);
-    //int a=f.tellp();
     while(f) {
         f.get(ch);
         f1.put(ch);
-      //<< ch;
     }
-    // cout<<a;
+    f.close();
+    f1.close();
+    cout << "Successfully Copied!";
 }
