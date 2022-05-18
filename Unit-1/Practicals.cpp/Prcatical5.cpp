@@ -15,7 +15,7 @@ void Employee ::GetData()
 {
     cout << "SHRUTI SHARMA \n ";
     cout << "UID: 21BCS9445\n";
-    cout << "CLASS:210A\n";
+    cout << "CLASS:209A\n";
     cout << "\n\tEnter Employee Name : ";
     cin >> Name;
     cout << "\n\tEnter Employee Age : ";
@@ -34,13 +34,15 @@ void Employee ::PutData()
 }
 int main()
 {
-    Employee E[2];
+    int n;
+    cin>>n;
+    Employee E[n];
     int i;
-    for (i = 0; i < 2; i++)
+    for (i = 0; i < n; i++)
     {
         E[i].GetData();
     }
-    for (i = 0; i < 2; i++)
+    for (i = 0; i < n; i++)
     {
         E[i].PutData();
     }

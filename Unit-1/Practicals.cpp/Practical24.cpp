@@ -1,4 +1,4 @@
-#include "iostream"
+#include "bits/stdc++.h"
 using namespace std;
 void shibu(double x)
 {
@@ -10,9 +10,9 @@ void shibu(double x)
             throw 'a';
         if (x == 2)
             throw 88.88;
-        else throw ">>";
+        else throw "dfg";
     }
-    catch (int x)
+    catch (string x)
     {
         cout << "Caught: " << x << endl;
     }
