@@ -18,7 +18,7 @@ void shibu(double x)
     }
 
     catch(char a){
-        cout << "Got: " << a << endl;
+        cout << "Got it: " << a << endl;
     }
     
     catch(double number) {
