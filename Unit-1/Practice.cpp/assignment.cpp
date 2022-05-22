@@ -14,8 +14,8 @@ int main(){
         localVar();
     }
     int lCount = localVar();
-    cout << "Using global variable count = " << count << endl;
-    cout << "Using local variable count = " << lCount << endl;
+    cout << "Using global variable count = " << count << "\n";
+    cout << "Using local variable count = " << lCount << "\n";
     return 0;
 }
 
