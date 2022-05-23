@@ -10,7 +10,7 @@ double division(int a, int b)
 
 }
 
-int main() {
+void main() {
     int x, z;
     cout << "Enter a number: " << "\n";
     cin >> x;
@@ -22,5 +22,4 @@ int main() {
     catch(const char * msg) {
         cerr << msg << endl;
     }
-    return 0;
 }
