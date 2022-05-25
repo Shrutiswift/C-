@@ -14,7 +14,7 @@ void handy(int test)
 
     catch (int i)
     {
-        cout << "Caught an int Exception: " << i << endl;
+        cout << "Caught: " << i << endl;
     }
 
     catch (...)
