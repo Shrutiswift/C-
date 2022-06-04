@@ -1,9 +1,17 @@
 #include "iostream"
 using namespace std;
-int main() {
-    int arr[] = {10, 20, 30, 40, 50};
-    int *p = arr;
-    p += 3;
-    cout << *p;
+class Base{
+    int ABC;
+
+};
+class Derived1:Base{
+
+};
+class Derived2: Derived1{
+
+};
+int main(){
+    Derived2 D;
+    cout << sizeof(D);
     return 0;
 }
