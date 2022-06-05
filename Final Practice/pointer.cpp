@@ -1,17 +1,21 @@
 #include "iostream"
 using namespace std;
-class Base{
-    int ABC;
-
+class TEMP{
+    int x;
+    public:
+    TEMP();
+    ~TEMP();
+    void Show() const;
 };
-class Derived1:Base{
-
-};
-class Derived2: Derived1{
-
-};
+TEMP :: TEMP() {
+    x = 50;
+}
+void TEMP :: Show()
+const{
+    cout << x;
+}
 int main(){
-    Derived2 D;
-    cout << sizeof(D);
+    TEMP obj;
+    obj.Show();
     return 0;
 }
