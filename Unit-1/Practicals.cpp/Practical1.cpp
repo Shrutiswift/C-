@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
     int main() {
+         //Shruti Sharma rocks
         int sum, marks, subject, total = 0, average;
         cout << "Enter the number of subjects: \n";
         cin >> subject;
