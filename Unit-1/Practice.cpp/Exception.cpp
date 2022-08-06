@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    //Simple code
+    Simple code
     int numerator, denominator, result;
     cout << "Enter numerator and denominator: " << endl;
     cin >> numerator >> denominator;
