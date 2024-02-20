@@ -3,5 +3,6 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "istream": "cpp"
-    }
+    },
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
 }
